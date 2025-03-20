@@ -1,0 +1,8 @@
+{
+	"name": "IntermediateAdvancements",
+	"version": "1.0.0",
+	"title": "Q's Intermediate Advancements Mod",
+	"author": "Q",
+	"factorio_version": "2.0",
+	"dependencies": ["base >= 2.0.0", "! space-age"]
+}

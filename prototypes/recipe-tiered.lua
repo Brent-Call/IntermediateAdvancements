@@ -141,6 +141,7 @@ data:extend({
 	emissions_multiplier = TIER_1_POLLUTION_MULTIPLIER,
 	allow_productivity = true,
 	--crafting_machine_tint will be defined later
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -161,7 +162,8 @@ data:extend({
 	results = {{ type = "item", name = "plastic-bar", amount = 25 }},
 	emissions_multiplier = TIER_1_POLLUTION_MULTIPLIER,
 	allow_productivity = true,
-	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "plastic-bar" ].crafting_machine_tint )
+	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "plastic-bar" ].crafting_machine_tint ),
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -181,7 +183,8 @@ data:extend({
 	results = {{ type = "item", name = "sulfur", amount = 660 }},
 	emissions_multiplier = TIER_1_POLLUTION_MULTIPLIER,
 	allow_productivity = true,
-	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "sulfur" ].crafting_machine_tint )
+	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "sulfur" ].crafting_machine_tint ),
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -197,7 +200,8 @@ data:extend({
 	energy_required = 2.75,
 	results = {{ type = "item", name = "iron-gear-wheel", amount = 7 }},
 	emissions_multiplier = TIER_1_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -213,7 +217,8 @@ data:extend({
 	energy_required = 2,
 	results = {{ type = "item", name = "copper-cable", amount = 10 }},
 	emissions_multiplier = TIER_1_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -234,7 +239,8 @@ data:extend({
 	energy_required = 3,
 	results = {{ type = "item", name = "electronic-circuit", amount = 5 }},
 	emissions_multiplier = TIER_1_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -255,7 +261,8 @@ data:extend({
 	results = {{ type = "item", name = "battery", amount = 10 }},
 	emissions_multiplier = TIER_1_POLLUTION_MULTIPLIER,
 	allow_productivity = true,
-	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "battery" ].crafting_machine_tint )
+	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "battery" ].crafting_machine_tint ),
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -273,7 +280,8 @@ data:extend({
 	energy_required = 7.5,
 	results = {{ type = "item", name = "iron-stick", amount = 33 }},
 	emissions_multiplier = TIER_1_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -295,7 +303,8 @@ data:extend({
 	energy_required = 90,
 	results = {{ type = "item", name = "low-density-structure", amount = 7 }},
 	emissions_multiplier = TIER_1_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -314,7 +323,8 @@ data:extend({
 	energy_required = 90,
 	results = {{ type = "item", name = "rocket-fuel", amount = 6 }},
 	emissions_multiplier = TIER_1_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 --================================================--
 --        TIER 2 ADVANCED CRAFTING RECIPES        --
@@ -339,7 +349,8 @@ data:extend({
 	energy_required = 20 / 3,
 	results = {{ type = "item", name = "concrete", amount = 10 }},
 	emissions_multiplier = TIER_2_POLLUTION_MULTIPLIER,
-	allow_productivity = false --Because the base concrete recipe doesn't allow productivity
+	allow_productivity = false, --Because the base concrete recipe doesn't allow productivity
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -362,7 +373,8 @@ data:extend({
 	results = {{ type = "item", name = "battery", amount = 1 }},
 	emissions_multiplier = TIER_2_POLLUTION_MULTIPLIER,
 	allow_productivity = true,
-	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "battery" ].crafting_machine_tint )
+	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "battery" ].crafting_machine_tint ),
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -381,7 +393,8 @@ data:extend({
 	energy_required = 0.25,
 	results = {{ type = "item", name = "iron-gear-wheel", amount = 2 }},
 	emissions_multiplier = TIER_2_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -400,7 +413,8 @@ data:extend({
 	energy_required = 0.25,
 	results = {{ type = "item", name = "copper-cable", amount = 3 }},
 	emissions_multiplier = TIER_2_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 --The following is an outlier; it's a tier 2 recipe that doesn't need lube
 {
@@ -421,7 +435,8 @@ data:extend({
 	energy_required = 0.4,
 	results = {{ type = "item", name = "electronic-circuit", amount = 3 }},
 	emissions_multiplier = TIER_2_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -442,7 +457,8 @@ data:extend({
 	energy_required = 5,
 	results = {{ type = "item", name = "advanced-circuit", amount = 1 }},
 	emissions_multiplier = TIER_2_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -466,7 +482,8 @@ data:extend({
 	energy_required = 8,
 	results = {{ type = "item", name = "processing-unit", amount = 1 }},
 	emissions_multiplier = TIER_2_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -488,7 +505,8 @@ data:extend({
 	energy_required = 5,
 	results = {{ type = "item", name = "engine-unit", amount = 1 }},
 	emissions_multiplier = TIER_2_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -509,7 +527,8 @@ data:extend({
 	energy_required = 7,
 	results = {{ type = "item", name = "electric-engine-unit", amount = 1 }},
 	emissions_multiplier = TIER_2_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -530,7 +549,8 @@ data:extend({
 	energy_required = 6,
 	results = {{ type = "item", name = "low-density-structure", amount = 1 }},
 	emissions_multiplier = TIER_2_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 --================================================--
 --        TIER 3 ADVANCED CRAFTING RECIPES        --
@@ -560,7 +580,8 @@ data:extend({
 	main_product = "plastic-bar",
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
 	allow_productivity = true,
-	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "plastic-bar" ].crafting_machine_tint )
+	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "plastic-bar" ].crafting_machine_tint ),
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -574,6 +595,8 @@ data:extend({
 	--Also converts 1 coal into 1 plastic bar
 	--Time efficiency: 11.111% improvement over base recipe (exact number is 10/9)
 	--Resource efficiency: 66.667% improvement over base recipe (exact number is 5/3)
+	--Ehhh, I'm not so sure this is balanced, because the player can use quality
+	-- item inputs to get waaay too much quality sulfur.  Hmm...
 	ingredients = {
 		{ type = "fluid", name = "water", amount = 100, ignored_by_stats = 10 },
 		{ type = "fluid", name = "petroleum-gas", amount = 100, ignored_by_stats = 10 },
@@ -590,7 +613,8 @@ data:extend({
 	main_product = "sulfur",
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
 	allow_productivity = true,
-	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "sulfur" ].crafting_machine_tint )
+	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "sulfur" ].crafting_machine_tint ),
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -609,7 +633,8 @@ data:extend({
 	energy_required = 0.625,
 	results = {{ type = "item", name = "iron-gear-wheel", amount = 1 }},
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -628,7 +653,8 @@ data:extend({
 	energy_required = 0.75,
 	results = {{ type = "item", name = "iron-stick", amount = 3 }},
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -647,7 +673,8 @@ data:extend({
 	energy_required = 1,
 	results = {{ type = "item", name = "copper-cable", amount = 4 }},
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -669,7 +696,8 @@ data:extend({
 	energy_required = 1.25,
 	results = {{ type = "item", name = "electronic-circuit", amount = 3 }},
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -690,7 +718,8 @@ data:extend({
 	energy_required = 9,
 	results = {{ type = "item", name = "advanced-circuit", amount = 2 }},
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -715,7 +744,8 @@ data:extend({
 	energy_required = 10,
 	results = {{ type = "item", name = "processing-unit", amount = 1 }},
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -739,7 +769,8 @@ data:extend({
 	energy_required = 30,
 	results = {{ type = "item", name = "engine-unit", amount = 5 }},
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -760,7 +791,8 @@ data:extend({
 	energy_required = 22,
 	results = {{ type = "item", name = "electric-engine-unit", amount = 3 }},
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -779,7 +811,8 @@ data:extend({
 	energy_required = 13,
 	results = {{ type = "item", name = "rocket-fuel", amount = 1 }},
 	emissions_multiplier = TIER_3_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_decomposition = false
 },
 --================================================--
 --        TIER 4 ADVANCED CRAFTING RECIPES        --
@@ -816,7 +849,9 @@ data:extend({
 	},
 	main_product = "concrete",
 	emissions_multiplier = TIER_4_POLLUTION_MULTIPLIER,
-	allow_productivity = false --Base recipe doesn't allow productivity, so this one doesn't, either
+	allow_productivity = false, --Base recipe doesn't allow productivity, so this one doesn't, either
+	allow_quality = false, --Or else you could use this recipe to bump up the quality of the catalysts
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -844,7 +879,9 @@ data:extend({
 	},
 	main_product = "refined-concrete",
 	emissions_multiplier = TIER_4_POLLUTION_MULTIPLIER,
-	allow_productivity = false --Base recipe doesn't allow productivity, so this one doesn't, either
+	allow_productivity = false, --Base recipe doesn't allow productivity, so this one doesn't, either
+	allow_quality = false, --Or else you could use this recipe to bump up the quality of the catalysts
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -875,7 +912,9 @@ data:extend({
 		{ type = "item", name = "space-science-pack", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 }
 	},
 	emissions_multiplier = TIER_4_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_quality = false, --Or else you could use this recipe to bump up the quality of the catalysts
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -902,7 +941,9 @@ data:extend({
 	main_product = "solid-fuel",
 	emissions_multiplier = TIER_4_POLLUTION_MULTIPLIER,
 	allow_productivity = true,
-	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "solid-fuel-from-light-oil" ].crafting_machine_tint )
+	allow_quality = false, --Or else you could use this recipe to bump up the quality of the catalysts
+	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "solid-fuel-from-light-oil" ].crafting_machine_tint ),
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -929,7 +970,9 @@ data:extend({
 	main_product = "plastic-bar",
 	emissions_multiplier = TIER_4_POLLUTION_MULTIPLIER,
 	allow_productivity = true,
-	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "plastic-bar" ].crafting_machine_tint )
+	allow_quality = false, --Or else you could use this recipe to bump up the quality of the catalysts
+	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "plastic-bar" ].crafting_machine_tint ),
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -960,7 +1003,9 @@ data:extend({
 	main_product = "battery",
 	emissions_multiplier = TIER_4_POLLUTION_MULTIPLIER,
 	allow_productivity = true,
-	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "battery" ].crafting_machine_tint )
+	allow_quality = false, --Or else you could use this recipe to bump up the quality of the catalysts
+	crafting_machine_tint = table.deepcopy( data.raw.recipe[ "battery" ].crafting_machine_tint ),
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -983,7 +1028,9 @@ data:extend({
 	},
 	main_product = "iron-stick",
 	emissions_multiplier = TIER_4_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_quality = false, --Or else you could use this recipe to bump up the quality of the catalysts
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -1011,7 +1058,9 @@ data:extend({
 	},
 	main_product = "advanced-circuit",
 	emissions_multiplier = TIER_4_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_quality = false, --Or else you could use this recipe to bump up the quality of the catalysts
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -1038,7 +1087,9 @@ data:extend({
 	},
 	main_product = "processing-unit",
 	emissions_multiplier = TIER_4_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_quality = false, --Or else you could use this recipe to bump up the quality of the catalysts
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -1056,6 +1107,7 @@ data:extend({
 	enabled = false,
 	category = "centrifuging",
 	auto_recycle = false,
+	unlock_results = false,
 	--Slightly increased cost, slightly decreased crafting time, also outputs stone & copper ore.
 	--Doesn't output any more U-235 because by this point the player would have the Kovarex Enrichment Process.
 	ingredients = {
@@ -1071,7 +1123,9 @@ data:extend({
 		{ type = "item", name = "space-science-pack", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 }
 	},
 	emissions_multiplier = TIER_4_POLLUTION_MULTIPLIER,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_quality = false, --Or else you could use this recipe to bump up the quality of the catalysts
+	allow_decomposition = false
 }
 })
 

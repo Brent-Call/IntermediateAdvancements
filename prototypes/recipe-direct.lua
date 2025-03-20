@@ -38,6 +38,7 @@ data:extend({
 	icons = make_direct_icon( "fast-transport-belt" ),
 	enabled = false,
 	category = "crafting",
+	auto_recycle = false,
 	--Acts as though we instantly craft 1 yellow belt before crafting the red belt.
 	--We would normally require 0.5 iron plates + 0.5 iron gear wheels for the yellow belt
 	--Instead, we say 0.5 iron gear wheels is worth 1 iron plate, & we round up to 2 iron plates.
@@ -50,7 +51,8 @@ data:extend({
 	results = {{ type = "item", name = "fast-transport-belt", amount = 1 }},
 	emissions_multiplier = 1.25,
 	allow_productivity = false,
-	allow_as_intermediate = false
+	allow_as_intermediate = false,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -60,6 +62,7 @@ data:extend({
 	icons = make_direct_icon( "fast-underground-belt" ),
 	enabled = false,
 	category = "crafting",
+	auto_recycle = false,
 	--We would normally require 2.5 iron plate + 2.5 iron gear wheel for the yellow belts
 	--Instead, we say the half iron gear wheel is worth 1 iron plate, & we round up
 	--Overall, this is less resource efficient, but it's significantly faster.
@@ -71,7 +74,8 @@ data:extend({
 	results = {{ type = "item", name = "fast-underground-belt", amount = 2 }},
 	emissions_multiplier = 1.25,
 	allow_productivity = false,
-	allow_as_intermediate = false
+	allow_as_intermediate = false,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -81,6 +85,7 @@ data:extend({
 	icons = make_direct_icon( "fast-splitter" ),
 	enabled = false,
 	category = "crafting",
+	auto_recycle = false,
 	--Overall, this has the same resource efficiency, but it's faster
 	ingredients = {
 		{ type = "item", name = "iron-plate", amount = 7 },
@@ -91,7 +96,8 @@ data:extend({
 	results = {{ type = "item", name = "fast-splitter", amount = 1 }},
 	emissions_multiplier = 1.25,
 	allow_productivity = false,
-	allow_as_intermediate = false
+	allow_as_intermediate = false,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -101,6 +107,7 @@ data:extend({
 	icons = make_direct_icon( "long-handed-inserter" ),
 	enabled = false,
 	category = "crafting",
+	auto_recycle = false,
 	--Takes 60% of the crafting time it would require to craft the items sequentially
 	ingredients = {
 		{ type = "item", name = "iron-plate", amount = 2 },
@@ -111,7 +118,8 @@ data:extend({
 	results = {{ type = "item", name = "long-handed-inserter", amount = 1 }},
 	emissions_multiplier = 1.1,
 	allow_productivity = false,
-	allow_as_intermediate = false
+	allow_as_intermediate = false,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -121,6 +129,7 @@ data:extend({
 	icons = make_direct_icon( "fast-inserter" ),
 	enabled = false,
 	category = "crafting",
+	auto_recycle = false,
 	--Takes 60% of the crafting time it would require to craft the items sequentially
 	ingredients = {
 		{ type = "item", name = "iron-plate", amount = 3 },
@@ -131,7 +140,8 @@ data:extend({
 	results = {{ type = "item", name = "fast-inserter", amount = 1 }},
 	emissions_multiplier = 1.1,
 	allow_productivity = false,
-	allow_as_intermediate = false
+	allow_as_intermediate = false,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -141,6 +151,7 @@ data:extend({
 	icons = make_direct_icon( "bulk-inserter" ),
 	enabled = false,
 	category = "crafting",
+	auto_recycle = false,
 	--Takes approximately 47% of the crafting time it would require to craft the items sequentially
 	ingredients = {
 		{ type = "item", name = "iron-plate", amount = 3 },
@@ -152,7 +163,8 @@ data:extend({
 	results = {{ type = "item", name = "bulk-inserter", amount = 1 }},
 	emissions_multiplier = 1.2,
 	allow_productivity = false,
-	allow_as_intermediate = false
+	allow_as_intermediate = false,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -162,6 +174,7 @@ data:extend({
 	icons = make_direct_icon( "refined-concrete" ),
 	enabled = false,
 	category = "crafting-with-fluid",
+	auto_recycle = false,
 	--Crafting refined concrete without requiring 2 batches of normal concrete first
 	--It takes less time than if a single machine had crafted them all sequentially
 	--It takes the same amount of water & stone bricks as normal, as well
@@ -175,7 +188,8 @@ data:extend({
 	energy_required = 25,
 	results = {{ type = "item", name = "refined-concrete", amount = 10 }},
 	emissions_multiplier = 1.5,
-	allow_productivity = false --Because the base refined concrete recipe doesn't allow productivity
+	allow_productivity = false, --Because the base refined concrete recipe doesn't allow productivity,
+	allow_decomposition = false
 },
 {
 	type = "recipe",
@@ -183,6 +197,7 @@ data:extend({
 	subgroup = "fluid-recipes",
 	localised_name = make_direct_localised_name( "solid-fuel" ),
 	order = "b[fluid-chemistry]-e[solid-fuel-from-heavy-oil]-direct",
+	auto_recycle = false,
 	--icons will be defined later
 	icons = make_direct_icon( "solid-fuel" ),
 	enabled = false,
@@ -194,7 +209,11 @@ data:extend({
 	energy_required = 18.625,
 	results = {{ type = "item", name = "solid-fuel", amount = 12 }},
 	emissions_multiplier = 1.65,
-	allow_productivity = true
+	allow_productivity = true,
+	allow_quality = true, --This recipe allows quality, but ...
+	-- ... Oil Refineries can't have quality modules put in them, so
+	-- you won't be able to use quality on this recipe anyways.
+	allow_decomposition = false
 }
 })
 

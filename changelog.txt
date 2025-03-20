@@ -3,3 +3,4 @@ Version: 1.0.0
 Date: 20 March 2025
   Major Features:
     - Initial release of this mod.
+    - Added compatibility with Quality.

@@ -226,7 +226,7 @@ data:extend({
 	},
 	prerequisites = { "logistics-3" },
 	unit = {
-		count = 4500,
+		count = 100,
 		ingredients = {
 			{ "automation-science-pack", 1 },
 			{ "logistic-science-pack", 1 },

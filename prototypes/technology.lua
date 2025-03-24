@@ -3,6 +3,11 @@ data:extend({
 	type = "technology",
 	name = "q__advanced-intermediates",
 	icons = {
+		--There's an issue where in-game (not in the tech tree, but in the button) the tech icons are all mis-sized.
+		--Putting empty.png as the very bottom layer seems to make it work.
+		--If for some reason empty.png gets removed or changed & that breaks this mod, the fix is easy!
+		--empty.png is literally just a completely transparent square with a side length of 64 pixels.
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/icons/iron-gear-wheel.png", icon_size = 64, scale = 1, shift = { -32, 16 }},
 		{ icon = "__base__/graphics/icons/iron-gear-wheel.png", icon_size = 64, scale = 1, shift = { -32, 0 }},
 		{ icon = "__base__/graphics/icons/iron-gear-wheel.png", icon_size = 64, scale = 1, shift = { -32, -16 }},
@@ -26,6 +31,7 @@ data:extend({
 	type = "technology",
 	name = "q__advanced-electronic-component-manufacturing",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/electronics.png", icon_size = 256, scale = 0.4, shift = { 0, 32 }},
 		{ icon = "__base__/graphics/technology/electronics.png", icon_size = 256, scale = 0.4, shift = { 0, 16 }},
 		{ icon = "__base__/graphics/technology/electronics.png", icon_size = 256, scale = 0.4, shift = { 0, 0 }},
@@ -51,6 +57,7 @@ data:extend({
 	name = "q__advanced-intermediates-2",
 	localised_description = { "technology-description.q__advanced-intermediates-2" },
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/plastics.png", icon_size = 256, scale = 0.25, shift = { -32, 32 }},
 		{ icon = "__base__/graphics/icons/iron-gear-wheel.png", icon_size = 64, scale = 1, shift = { 0, -32 }},
 		{ icon = "__base__/graphics/icons/copper-cable.png", icon_size = 64, scale = 1, shift = { 32, 32 }},
@@ -73,6 +80,7 @@ data:extend({
 	type = "technology",
 	name = "q__advanced-electronic-component-manufacturing-2",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/electronics.png", icon_size = 256, scale = 0.5, shift = { 0, 16 }},
 		{ icon = "__base__/graphics/technology/advanced-circuit.png", icon_size = 256, scale = 0.5, shift = { 0, -16 }},
 		{ icon = "__core__/graphics/icons/technology/constants/constant-speed.png", icon_size = 128, scale = 0.5, shift = { 50, 50 }, floating = true }
@@ -97,6 +105,7 @@ data:extend({
 	type = "technology",
 	name = "q__advanced-concrete-processes",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/concrete.png", icon_size = 256, scale = 0.5 },
 		{ icon = "__core__/graphics/icons/technology/constants/constant-speed.png", icon_size = 128, scale = 0.5, shift = { 0, 50 }, floating = true },
 		{
@@ -126,6 +135,7 @@ data:extend({
 	name = "q__advanced-intermediates-3",
 	localised_description = { "technology-description.q__advanced-intermediates-3" },
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/icons/iron-gear-wheel.png", icon_size = 64, scale = 1, shift = { -32, 32 }},
 		{ icon = "__base__/graphics/icons/iron-stick.png", icon_size = 64, scale = 1, shift = { 0, -32 }},
 		{ icon = "__base__/graphics/icons/copper-cable.png", icon_size = 64, scale = 1, shift = { 32, 32 }},
@@ -147,6 +157,7 @@ data:extend({
 	type = "technology",
 	name = "q__advanced-electronic-component-manufacturing-3",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/electronics.png", icon_size = 256, scale = 0.5, shift = { 0, 16 }},
 		{ icon = "__base__/graphics/technology/processing-unit.png", icon_size = 256, scale = 0.5, shift = { 0, -16 }},
 		{ icon = "__core__/graphics/icons/technology/constants/constant-recipe-productivity.png", icon_size = 128, scale = 0.5, shift = { 0, 50 }, floating = true },
@@ -173,6 +184,7 @@ data:extend({
 	type = "technology",
 	name = "q__advanced-engine-manufacturing-1",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/engine.png", icon_size = 256, scale = 0.375, shift = { -16, -16 }},
 		{ icon = "__base__/graphics/technology/electric-engine.png", icon_size = 256, scale = 0.375, shift = { 16, 16 }},
 		{ icon = "__core__/graphics/icons/technology/constants/constant-speed.png", icon_size = 128, scale = 0.5, shift = { 50, 50 }, floating = true }
@@ -192,6 +204,7 @@ data:extend({
 	type = "technology",
 	name = "q__advanced-engine-manufacturing-2",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/engine.png", icon_size = 256, scale = 0.375, shift = { -16, -16 }},
 		{ icon = "__base__/graphics/technology/electric-engine.png", icon_size = 256, scale = 0.375, shift = { 16, 16 }},
 		{ icon = "__core__/graphics/icons/technology/constants/constant-recipe-productivity.png", icon_size = 128, scale = 0.5, shift = { 50, 50 }, floating = true }
@@ -217,6 +230,7 @@ data:extend({
 	type = "technology",
 	name = "q__direct-logistics-crafting",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/logistics-2.png", icon_size = 256, scale = 0.5 },
 		{
 			icon = "__core__/graphics/icons/technology/constants/constant-movement-speed.png",
@@ -248,6 +262,7 @@ data:extend({
 	name = "q__direct-bulk-inserter-crafting",
 	localised_description = { "technology-description.q__direct-logistics-crafting" },
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/bulk-inserter.png", icon_size = 256, scale = 0.5 },
 		{
 			icon = "__core__/graphics/icons/technology/constants/constant-movement-speed.png",
@@ -271,6 +286,7 @@ data:extend({
 	name = "q__advanced-intermediates-4",
 	localised_description = { "technology-description.q__advanced-intermediates-4" },
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64, scale = 1, shift = { -32, -32 }},
 		{ icon = "__base__/graphics/technology/sulfur-processing.png", icon_size = 256, scale = 0.25, shift = { 32, -32 }},
 		{ icon = "__base__/graphics/icons/iron-stick.png", icon_size = 64, scale = 1, shift = { -32, 32 }},
@@ -305,6 +321,7 @@ data:extend({
 	localised_name = { "technology-name.q__advanced-oil-processing-2" },
 	localised_description = { "technology-description.q__advanced-oil-processing-2" },
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/oil-processing.png", icon_size = 256, scale = 0.5 },
 		{ icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64, scale = 0.5, shift = { -44, 12 }},
 		{ icon = "__base__/graphics/icons/sulfur.png", icon_size = 64, scale = 0.5, shift = { 44, 12 }},
@@ -330,6 +347,7 @@ data:extend({
 	type = "technology",
 	name = "q__advanced-electronic-component-manufacturing-4",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/advanced-circuit.png", icon_size = 256, scale = 0.5, shift = { 0, 16 }},
 		{ icon = "__base__/graphics/technology/processing-unit.png", icon_size = 256, scale = 0.5, shift = { 0, -16 }},
 		{ icon = "__core__/graphics/icons/technology/constants/constant-recipe-productivity.png", icon_size = 128, scale = 0.5, shift = { 50, 50 }, floating = true }
@@ -355,6 +373,7 @@ data:extend({
 	type = "technology",
 	name = "q__advanced-fuel-refining",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64, scale = 1.5, shift = { -16, -16 }},
 		{ icon = "__base__/graphics/technology/rocket-fuel.png", icon_size = 256, scale = 0.375, shift = { 16, 16 }},
 		{ icon = "__core__/graphics/icons/technology/constants/constant-capacity.png", icon_size = 128, scale = 0.5, shift = { 50, 50 }, floating = true }
@@ -379,6 +398,7 @@ data:extend({
 	type = "technology",
 	name = "q__superior-materials-processing",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/concrete.png", icon_size = 256, scale = 0.375, shift = { -16, -16 }},
 		{ icon = "__base__/graphics/technology/uranium-processing.png", icon_size = 256, scale = 0.375, shift = { 16, 16 }},
 		{ icon = "__base__/graphics/technology/space-science-pack.png", icon_size = 256, scale = 0.125, shift = { 50, 50 }, floating = true }
@@ -410,6 +430,7 @@ data:extend({
 	type = "technology",
 	name = "q__advanced-electronic-component-manufacturing-5",
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/advanced-circuit.png", icon_size = 256, scale = 0.5, shift = { 0, 16 }},
 		{ icon = "__base__/graphics/technology/processing-unit.png", icon_size = 256, scale = 0.5, shift = { 0, -16 }},
 		{ icon = "__base__/graphics/technology/space-science-pack.png", icon_size = 256, scale = 0.125, shift = { 50, 50 }, floating = true }
@@ -438,6 +459,7 @@ data:extend({
 	name = "q__advanced-intermediates-5",
 	localised_description = { "technology-description.q__advanced-intermediates-4" },
 	icons = {
+		{ icon = "__core__/graphics/empty.png", icon_size = 64 },
 		{ icon = "__base__/graphics/technology/advanced-oil-processing.png", icon_size = 256, scale = 0.25, shift = { -32, -32 }},
 		{ icon = "__base__/graphics/technology/battery.png", icon_size = 256, scale = 0.25, shift = { 32, -32 }},
 		{ icon = "__base__/graphics/technology/rocket-fuel.png", icon_size = 256, scale = 0.25, shift = { -32, 32 }},
